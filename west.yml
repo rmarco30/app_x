@@ -1,0 +1,13 @@
+manifest:
+  # lowest version of the manifest file schema that can parse this file’s data
+  version: 0.8
+
+  projects:
+    - name: app_eric
+      url: https://github.com/rmarco30/app_eric
+      revision: master
+      import: true
+
+  # Settings applied using the self key will only be applied to the manifest repository
+  self:
+    path: app_x
