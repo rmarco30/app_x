@@ -6,11 +6,12 @@ manifest:
     - name: app_eric
       url: https://github.com/rmarco30/app_eric
       revision: master
-      # import everything in app_eric's west.yml file except app_glen and app_x
+      # import only zephyr and cmsis in app_eric's west.yml (technically in zephyr's west.yml file) file
+      # good for filtering only the required imports needed by app_x
       import:
-        name-blocklist:
-          - app_glen
-          - app_x
+        name-allowlist:
+          - zephyr
+          - cmsis
 
   # Settings applied using the self key will only be applied to the manifest repository
   self:
